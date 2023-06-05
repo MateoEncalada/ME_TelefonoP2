@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ME_TelefonoP2.MenuME"
+             Title="MenuME">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Ingrese un número:"/>
+        <TextBox Grid.Row="1" x:Name="numeroTextBox" Width="100"/>
+
+        <Label Grid.Row="2" Content="Seleccione una opción:"/>
+        <ComboBox Grid.Row="3" x:Name="opcionesComboBox" Width="100">
+            <ComboBoxItem Content="Opción 1"/>
+            <ComboBoxItem Content="Opción 2"/>
+            <ComboBoxItem Content="Opción 3"/>
+        </ComboBox>
+
+        <Label Grid.Row="4" Content="Seleccione una o más opciones:"/>
+        <ListBox Grid.Row="5" x:Name="opcionesMultiplesListBox" SelectionMode="Multiple" Width="100">
+            <ListBoxItem Content="1: 3"/>
+            <ListBoxItem Content="2: 5"/>
+            <ListBoxItem Content="3: 10"/>
+        </ListBox>
+
+        <Button Grid.Row="6" Content="Recargar" Width="100" Click="Button_Click"/>
+    </Grid>
+</ContentPage>
+
